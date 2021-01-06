@@ -1,0 +1,51 @@
+// Tipos de selectores
+
+1) Universal (se lo aplica a todo)
+
+ * {
+   margin: 15px;
+}
+
+2) Tipo
+
+h1 {
+  color: red;
+}
+
+3) clase
+
+.saludo {
+  font-size: 4px;
+}
+
+4) ID
+
+#id {
+  border-radius: 20px;
+}
+
+// pseudo-clases 
+
+1) Desgina estilos a la primera etiqueta hija
+
+ejemploEtiqueta:first-child {
+  color: pink;
+} 
+
+2) Desgina estilos a la ultima etiqueta hija
+
+ejemploEtiqueta:last-child {
+    color: orange;
+  }
+
+3) Designa estilos segun los numeros pares o impares que decidamos
+
+nth = n (es el numero), th (es la forma de representar los numeros ordinarios)
+dentro de child ponemos 2n+1 si queremos que sea impar y 2n sea par
+
+ejemploEtiqueta:nth-child(2n) {
+  color: brown;
+}
+
+// pseudo-elementos
+

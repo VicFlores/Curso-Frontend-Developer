@@ -1,0 +1,220 @@
+$blanco: white;
+
+body {
+  margin: 0%;
+  background-color: #8F57FD;
+  font-family: 'Mulish', sans-serif;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+/* MENU */
+.header {
+  @extend .flex;
+  background-color: #8F57FD;
+  width: 100%;
+  height: 80px;
+  // display: flex;
+  justify-content: space-between;
+  // align-items: center;
+}
+
+@mixin width {
+  width: 200px;
+}
+.header__img {
+  @include width;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.header__menu {
+  margin-right: 45px;
+  margin-top: 10px;
+}
+.header__menu ul {
+  display: none; /*Oculta los elementos*/
+  list-style: none; /*Quita los puntos de la lista*/
+  padding: 0px;
+  position: absolute;
+  margin: 0px;
+  width: 100px;
+  text-align: center;
+}
+.header__menu:hover ul, ul:hover {
+  display: block; /*Hace que se muestre lo que ocultamos*/
+}
+.header__menu li {
+  margin: 10px 0px;
+}
+.header__menu li a {
+  color: white;
+  text-decoration: none;
+}
+.header__menu li a:hover {
+  text-decoration: underline;
+}
+.header__menu--profile {
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+}
+.header__menu--profile img {
+  margin-right: 8px;
+  width: 50px;
+}
+.header__menu--profile p {
+  margin: 0px;
+  color: white;
+}
+
+/* Buscador */
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 300px;
+}
+
+.main__title {
+  color: white;
+  font-size: 25px;
+}
+
+.categories__title {
+  color: $blanco;
+  font-size: 16px;
+  position: absolute;
+  padding-left: 30px;
+  width: 100%;
+}
+
+.input {
+  background-color: rgb(255, 255, 255, 0.1); /* Opacidad */
+  border: 2px solid white;
+  border-radius: 25px;
+  color: white;
+  font-family: 'Mulish', sans-serif;
+  font-size: 16px;
+  height: 40px;
+  padding: 0px 25px;
+  width: 50%;
+  outline: none;
+}
+
+::placeholder {
+  color: white;
+}
+
+/*Carrousel*/
+
+.carrousel {
+  width: 100%;
+  /*overflow: scroll; Funciona para generar un scroll */
+  padding: 30px;
+  position: relative;
+}
+
+.carrousel__container {
+  white-space: nowrap; /*nowrap hace que los elementos sigan a la derecha sin saltar de linea*/
+  margin: 70px 0px;
+  padding-bottom: 10px;
+}
+
+.carrousel-item {
+  background-color: orange;
+  width: 200px;
+  height: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-right: 10px;
+  display: inline-block; /* Hace que se posicione uno al lado del otro*/
+  cursor: pointer;
+  transition: 450ms all; /*Tiempo de reaccion de la animacion*/
+  transform-origin: center left; /*Evita que se salga del origen*/ 
+  position: relative;
+}
+
+.carrousel-item:hover ~ .carrousel-item {
+  transform: translate3d(100px, 0, 0);
+}
+
+.carrousel__container:hover .carrousel-item {
+  opacity: 0.3;
+}
+
+.carrousel__container:hover .carrousel-item:hover {
+  transform: scale(1.5); /*hace que incremente de tamaño el elemento*/
+  opacity: 1;
+}
+
+.carrousel-item__img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover; /*Adapta la imagen a la cartita*/
+}
+
+.carrousel-item__details {
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%); /*Agrega desvanecido*/
+  opacity: 0;
+  transition: 500ms opacity;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.carrousel-item__details:hover {
+  opacity: 1;
+}
+
+.carrousel-item__details img {
+  padding-left: 5px;
+  width: 18px;
+}
+
+.carrousel-item__details p {
+  margin-top: 6px;
+  margin-left: 5px;
+}
+
+.carrousel-item__details--title {
+  color: palegoldenrod;
+  margin: 0px;
+  font-size: 12px;
+}
+
+.carrousel-item__details--subtitle {
+  color: palegoldenrod;
+  margin: 0px;
+  font-size: 10px;
+}
+
+/*Footer*/
+
+.footer {
+  background-color: #8F57FD;
+  display: flex;
+  align-items: center;
+  height: 109px;
+  width: 100%;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  padding: 0px 30px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}

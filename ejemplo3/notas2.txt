@@ -1,0 +1,60 @@
+// ¿Qué son y para qué nos sirven las arquitecturas CSS?
+
+Los objetivos son:
+
+Predecible > Escribir reglas claras.
+Reutilizable > No escribir codigo redundante.
+Mantenible > Que sea facil de leer y adaptarnos a los estandares.
+Escalable > Que pueda crecer facilmente pero sin afectar el rendimiento.
+
+Buenas practicas son:
+
+Establecer reglas para que el equipo se entienda.
+Explicar la estructura base o dar los fundamentos del proyecto a un nuevo integrante.
+Evitar hojas de estilo muy extensas
+Tener una buena documentación explicando ciertos aspectos del codigo.
+
+// arquitectura CSS
+
+1) OOCSS => CSS orientado a objetos
+
+Separa lo que es el diseño del contenido
+
+2) BEM => block element modified
+
+Separa los bloques, los elementos y los modificadores
+
+3) SMACSS => Arquitectura de CSS, escalable y modular
+
+* base: divir nuestro css en componentes base
+* layout: componentes que se utiliza en nuestra pagina una sola vez
+* module: componentes que se utiliza en nuestra pagina mas de una vez
+* state: estado de nuestros componentes
+* theme: cuando cabien los temas o los colores poder trabajar solo en ellos
+
+4) ITCSS => triangulo invertido de CSS
+
+Poder dividir todos nuestros archivos CSS en ciertas partes para evitar que se combinen
+
+* Ajustes
+* Herramientas
+* Generico
+* Elementos
+* Objetos
+* Componentes
+* Utilidades
+
+especifidad => quiere decir que hay elementos o clases con mayor peso que otros
+
+5) Atomic Design => Separa todo por atomos
+
+* atomos = elementos mas pequeños
+* moleculas = elementos mas grandes
+* organismos
+* templates
+* Paginas
+
+// Componente
+
+Es un elemento que podes utilizarlo mas adelante para construir futuros componentes
+*IMPORTANTE* => sacar los componentes antes de empezar el proyecto para que sea mas sencillo
